@@ -7,8 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-    </LinearLayout>
+        android:layout_height="50dp"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +20,7 @@
             android:background="#00000000"
             app:srcCompat="@drawable/mine_login"
             android:layout_width="50dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
         <TextView
             android:layout_marginLeft="30dp"
@@ -30,7 +29,7 @@
             android:textSize="18sp"
             android:gravity="center_vertical"
             android:layout_width="250dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
         <ImageView
             android:id="@+id/iv_setting"
@@ -53,27 +52,31 @@
             android:text="0\n关注"
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
+
         <Button
             android:background="#ffffff"
             android:text="0\n评论"
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
+
         <Button
             android:background="#ffffff"
             android:text="0\n发布"
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
+
         <Button
             android:background="#ffffff"
             android:text="0\n点赞"
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -84,7 +87,7 @@
             android:gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="我的团队"/>
+            android:text="我的团队" />
 
         <Button
             android:background="#ffffff"

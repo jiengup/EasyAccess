@@ -5,22 +5,20 @@
     android:layout_marginLeft="30dp"
     android:layout_marginRight="30dp"
     android:orientation="vertical">
-    
+
     <EditText
         android:id="@+id/et_id_code"
         android:layout_marginTop="30dp"
         android:hint="身份证后6位"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-    </EditText>
-    
+        android:layout_height="50dp"></EditText>
+
     <EditText
         android:id="@+id/et_id"
         android:layout_marginTop="30dp"
         android:hint="学号/工号"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-    </EditText>
+        android:layout_height="50dp"></EditText>
 
     <TextView
         android:id="@+id/tv_comment"
@@ -28,16 +26,14 @@
         android:layout_height="wrap_content"
         android:textStyle="italic"
         android:textSize="12dp"
-        android:text="上述字串将用于系统判断用户类别" >
-    </TextView>
+        android:text="上述字串将用于系统判断用户类别"></TextView>
 
     <EditText
         android:id="@+id/et_email"
         android:layout_marginTop="30dp"
         android:hint="邮箱号"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-    </EditText>
+        android:layout_height="50dp"></EditText>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -48,7 +44,7 @@
             android:layout_marginTop="30dp"
             android:hint="验证码"
             android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp" />
 
         <Button
             android:id="@+id/btn_get_code"
@@ -67,12 +63,12 @@
         android:inputType="textPassword"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btn_finish"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="完成注册"/>
+        android:text="完成注册" />
 
 </LinearLayout>

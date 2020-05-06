@@ -11,14 +11,14 @@
         android:hint="邮箱/用户名"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp" />
 
     <EditText
         android:id="@+id/et_password"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="密码"/>
+        android:hint="密码" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
             android:textColor="#5A9CF8"
             android:text="邮箱验证码登录"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <Button
             android:background="#00000000"
@@ -48,13 +48,13 @@
         android:id="@+id/btn_login"
         android:text="登录"
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp" />
 
     <Button
         android:id="@+id/btn_register"
         android:text="注册"
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp" />
 
 
 </LinearLayout>
