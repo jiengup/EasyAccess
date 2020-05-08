@@ -5,15 +5,23 @@
     android:layout_height="match_parent"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
-    android:paddingTop="5dp">
+    android:paddingTop="5dp"
+    android:background="@color/pickerview_timebtn_pre">
 
-    <include
-        android:id="@+id/titleBar"
-        layout="@layout/fragment_home"/>
+    <Button
+        android:id="@id/btn_search"
+        android:layout_width="280dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/bg_home_search_btn"
+        android:drawableLeft="@drawable/home_search"
+        android:paddingLeft="20dp" />
 
     <LinearLayout
         android:id="@+id/btn_list_layout"
-        android:layout_below="@id/titleBar"
+        android:layout_below="@id/btn_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -38,9 +46,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@id/btn_list_layout"
-        android:id="@+id/rv_list"
+        android:id="@+id/list_news"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
