@@ -29,11 +29,33 @@ A software developed for Software Engineer class by a HZAU
 
 可以参考写法
 
+### 2020/05/12
 
+完成了几乎全部的xml页面设计
+
+已经在pixel2虚拟机中测试正常
+
+后端已经导入测试数据
+
+将马上开始页面跳转逻辑开发
+
+以实现程序的基本逻辑跳转
+
+已经完成的文件：
+
+- activity_login.xml
+- activity_main.xml
+- activity_register.xml
+- activity_team_pub.xml
+- fragment_download.xml
+- fragment_mine.xml
+- fragment_news.xml
+- fragment_team.xml
+- layout_download_popup.xml
 
 ## TODO
 
-- [ ] 页面xml全部设计完成(DeadLIne: 05/08)
+- [x] 页面xml全部设计完成(DeadLIne: 05/08)
 - [ ] APP的基本跳转和显示逻辑全部实现(DeadLine:05/15)
 - [ ] 页面和功能细节全部完成，和后端网络通讯打通，第一个发布版本完成(DeadLine:05\22)
 - [ ] 全面测试修改，完成最终提交的版本(DeadLine:05\25 )
