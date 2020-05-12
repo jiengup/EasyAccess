@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="5dp"
+    android:background="@color/cardview_light_background">
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="280dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/bg_home_search_btn"
+        android:drawableLeft="@drawable/home_search"
+        android:paddingLeft="20dp" />
+
+    <LinearLayout
+        android:id="@+id/btn_list_layout"
+        android:layout_below="@id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="#00000000"
+            android:drawableTop="@drawable/campus_news"
+            android:text="校园资讯"
+            android:id="@+id/campus_news"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:background="#00000000"
+            android:drawableTop="@drawable/teacher_news"
+            android:text="教师资讯"
+            android:id="@+id/teacher_news"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/btn_list_layout"
+        android:id="@+id/list_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

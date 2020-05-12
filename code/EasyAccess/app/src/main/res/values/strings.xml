@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EasyAccess</string>
+    <string name="title_news">资讯</string>
+    <string name="title_download">下载资源</string>
+    <string name="title_team">团队</string>
+    <string name="title_mine">我的</string>
+</resources>
