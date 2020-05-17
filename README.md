@@ -24,10 +24,7 @@ A software developed for Software Engineer class by a HZAU
 已经完成的文件：
 
 - LoginActivity.java
-
 - RegisterActivity.java
-
-可以参考写法
 
 ### 2020/05/12
 
@@ -53,10 +50,48 @@ A software developed for Software Engineer class by a HZAU
 - fragment_team.xml
 - layout_download_popup.xml
 
+### 2020/05/17
+
+已经完成了基础页面之间的**全部跳转**
+
+已经将**后端代码框架搭建好**,并且已经实现了**目前用到的所有后端接口**
+
+详情跳转[Easy_access](https://github.com/JiengupXing/EasyAccess_backend)
+
+已经**完成了资讯(news)及其相关功能的开发**
+
+包括：
+
+- 获取资讯列表
+- 查看某一条资讯的详细内容
+- 对某一条资讯发表评论
+- 对某一条资讯点赞
+- 跳转到某一条资讯的原文地址
+- 对某一条评论点赞
+- 。。。。。。
+
+**将很快完成剩余部分功能的开发工作**
+
+已经完成的文件：
+
+- CommentActivity.java
+- NewsDetailActivity.java
+- mine
+  - MineFragment.java
+- news
+  - CommentAdapter.java
+  - CommentItem.java
+  - LoadListView.java
+  - NewsAdapter.java
+  - NewsFragment.java
+  - NewsItem.java
+
+目前**正在安排测试计划**，一切工作都在有序进行中~
+
 ## TODO
 
 - [x] 页面xml全部设计完成(DeadLIne: 05/08)
-- [ ] APP的基本跳转和显示逻辑全部实现(DeadLine:05/15)
+- [x] APP的基本跳转和显示逻辑全部实现(DeadLine:05/15)
 - [ ] 页面和功能细节全部完成，和后端网络通讯打通，第一个发布版本完成(DeadLine:05\22)
 - [ ] 全面测试修改，完成最终提交的版本(DeadLine:05\25 )
 - [ ] 课程收尾工作（文档）(DeadLine:05\29)
