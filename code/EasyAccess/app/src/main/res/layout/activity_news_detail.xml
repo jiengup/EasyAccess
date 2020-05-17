@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:id="@+id/news_detail_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="21dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3" />
+
+                <com.sackcentury.shinebuttonlib.ShineButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:src="@android:color/darker_gray"
+                    android:id="@+id/bt_like"
+                    app:btn_color="@android:color/darker_gray"
+                    app:btn_fill_color="#FF6666"
+                    app:allow_random_color="false"
+                    app:enable_flashing="false"
+                    app:big_shine_color="#FF6666"
+                    app:click_animation_duration="200"
+                    app:shine_animation_duration="1500"
+                    app:shine_turn_angle="10"
+                    app:small_shine_offset_angle="20"
+                    app:shine_distance_multiple="1.5"
+                    app:small_shine_color="#CC9999"
+                    app:shine_count="8"
+                    app:siShape="@raw/like"/>
+
+                <TextView
+                    android:id="@+id/tv_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:text="(0)">
+
+                </TextView>
+
+                <Space
+                    android:layout_width="262dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1" />
+
+                <Button
+                    android:id="@+id/btn_original"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+
+                    android:layout_weight="0.2"
+                    android:background="#00000000"
+                    android:text="查看原文"
+                    android:textColor="#5A9CF8"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="26dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

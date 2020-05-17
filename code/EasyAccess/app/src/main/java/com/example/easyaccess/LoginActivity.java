@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -17,6 +20,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.easyaccess.ui.mine.MineFragment;
+import com.example.easyaccess.ui.news.NewsFragment;
+import com.example.easyaccess.utils.Constants;
 import com.example.easyaccess.utils.ToastUtil;
 import com.example.easyaccess.utils.ValidateUtils;
 
@@ -78,17 +84,34 @@ public class LoginActivity extends AppCompatActivity {
                                 if (ret == 1) {
                                     ToastUtil.showMsg(getApplicationContext(), desc);
                                 } else {
-                                    String username = response.getString("username");
-                                    String head_portrait_url = response.getString("head_portrait");
+                                    String loginEmail = response.getString("email");
+                                    System.out.println(loginEmail);
+                                    String loginPassword = response.getString("password");
+                                    System.out.println(loginPassword);
+                                    String loginUsername = response.getString("username");
+                                    System.out.println(loginUsername);
+                                    String loginUserType = response.getString("userType");
+                                    System.out.println(loginUserType);
+                                    String loginDesc = response.getString("userDesc");
+                                    System.out.println(loginDesc);
+                                    String loginHead = response.getString("headPortrait");
+                                    System.out.println(loginHead);
+                                    String loginMajor = response.getString("belongToMajor");
+                                    System.out.println(loginMajor);
+                                    String loginGrade = response.getString("belongToGrade");
+                                    System.out.println(loginGrade);
                                     ToastUtil.showMsg(getApplicationContext(), desc);
-
-                                    //TODO:
-                                    mEditor.putString("email", email);
-                                    mEditor.putString("usename", username);
-                                    mEditor.putString("head_portrait_url", head_portrait_url);
+                                    mEditor.putString("email", loginEmail);
+                                    mEditor.putString("password", loginPassword);
+                                    mEditor.putString("username", loginUsername);
+                                    mEditor.putString("userType", loginUserType);
+                                    mEditor.putString("desc", loginDesc);
+                                    mEditor.putString("headPortrait", loginHead);
+                                    mEditor.putString("major", loginMajor);
+                                    mEditor.putString("grade", loginGrade);
                                     mEditor.apply();
-
-                                    finish();
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    startActivity(intent);
                                 }
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -101,8 +124,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void login(String email, String password, final VolleyCallback callback) {
-        String s;
-        String url = "http://127.0.0.1:8000/myauth/login";
+        String url = Constants.MYAUTH_URL + "login/";
+        System.out.println(url);
         try {
             RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
             JSONObject jsonBody = new JSONObject();
@@ -131,5 +154,10 @@ public class LoginActivity extends AppCompatActivity {
 
     public interface VolleyCallback {
         void onSuccessResponse(String result);
+    }
+
+    protected void onDestroy() {
+
+        super.onDestroy();
     }
 }

@@ -43,12 +43,12 @@
             android:layout_height="match_parent"/>
     </LinearLayout>
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@+id/btn_list_layout"
-        android:id="@+id/list_news"
+    <com.example.easyaccess.ui.news.LoadListView
+        android:layout_below="@id/btn_list_layout"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/news_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true" />
-
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:paddingBottom="20dp"/>
 </RelativeLayout>
