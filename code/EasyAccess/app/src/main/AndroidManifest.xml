@@ -6,7 +6,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
+<!--    <uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.PERMISSIONS_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -17,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
+        <activity android:name=".PublishActivity"></activity>
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -40,10 +42,33 @@
             android:label="登录" />
         <activity
             android:name=".NewsDetailActivity"
-            android:label="详细新闻"/>
+            android:label="详细新闻" />
         <activity
             android:name=".CommentActivity"
-            android:label="评论"/>
+            android:label="评论" />
+        <activity
+            android:name=".TeamworkDetailActivity"
+            android:label="项目详情">
+        </activity>
+        <activity
+            android:name=".EditPass"
+            android:label="修改密码">
+        </activity>
+        <activity android:name=".EditSign"
+            android:label="修改签名"/>
+        <activity android:name=".EditName"
+            android:label="修改用户名"/>
+        <activity android:name=".InfoSettingActivity"
+            android:label="个人设置"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.easyaccess.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.easyaccess.ui.LoadListView;
 import com.example.easyaccess.NewsDetailActivity;
 import com.example.easyaccess.R;
 import com.example.easyaccess.utils.Constants;
@@ -72,7 +73,7 @@ public class NewsFragment extends Fragment implements  LoadListView.ILoadListene
         llv.setAdapter(mAdapter);
     }
 
-    public void obtainData(){
+    private void obtainData(){
         String url = Constants.NEWS_URL + "get_news_list/" + "?start=" + news_start + "&end=" + news_end;
         try{
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null, new Response.Listener<JSONObject>() {

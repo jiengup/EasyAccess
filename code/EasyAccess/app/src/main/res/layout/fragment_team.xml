@@ -1,61 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
-
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="65dp">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <TextView
             android:id="@+id/tv_teacher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="教师"
             android:textSize="15sp"
-            android:layout_gravity="center"
+            android:layout_gravity="left"
             android:layout_marginLeft="15dp"
-            />
-        <Spinner
-            android:id="@+id/sp_teacher"
-            android:layout_width="0dp"
+            android:padding="10dp"/>
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/id_flowlayout_teacher"
+            zhy:max_select="-1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:padding="10dp">
+        </com.zhy.view.flowlayout.TagFlowLayout>
         <TextView
             android:id="@+id/tv_tag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="标签"
             android:textSize="15sp"
-            android:layout_gravity="center"
+            android:layout_gravity="left"
             android:layout_marginLeft="15dp"
-            />
-        <Spinner
-            android:id="@+id/sp_tag"
-            android:layout_width="0dp"
+            android:padding="10dp"/>
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/id_flowlayout_tag"
+            zhy:max_select="-1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:padding="10dp">
+        </com.zhy.view.flowlayout.TagFlowLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp" />
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="407dp" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="108dp"
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:layout_gravity="center|bottom"
@@ -63,5 +61,11 @@
         app:borderWidth="0.0dip"
         app:elevation="5.0dip"
         app:srcCompat="@drawable/pub"
-        android:focusable="true" />
-</LinearLayout>
+        android:focusable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="30dp"/>
+</RelativeLayout>

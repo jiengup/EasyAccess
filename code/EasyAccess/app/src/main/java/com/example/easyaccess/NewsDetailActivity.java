@@ -87,6 +87,7 @@ public class NewsDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!isLogin){
+                    Toast.makeText(getApplicationContext(), "请先登陆", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                     startActivity(intent);
                 }
@@ -238,6 +239,11 @@ public class NewsDetailActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!isLogin){
+                    Toast.makeText(getApplicationContext(), "请先登陆", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(intent);
+                }
                 Intent intent = new Intent();
                 intent.putExtra("news_id",getIntent().getStringExtra("news_id"));
                 intent.setClass(NewsDetailActivity.this, CommentActivity.class);

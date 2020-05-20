@@ -1,12 +1,16 @@
 package com.example.easyaccess.ui.news;
 
 public class CommentItem {
+    private String _id;
     private String headUrl;
     private String nickname;
     private String releaseTime;
     private String content;
     private int totalStars;
 
+
+    public String get_id() { return _id; }
+    public void set_id(String _id) { this._id = _id; }
     public String getHeadUrl() { return headUrl; }
     public void setHeadUrl(String headUrl) { this.headUrl = headUrl; }
     public String getNickname() { return nickname; }

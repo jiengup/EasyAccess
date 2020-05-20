@@ -1,100 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#FFF"
-    android:padding="10dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:layout_marginLeft="200dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="left"
+        android:text="筛选"
+        android:padding="20dp"
+        android:textColor="#000000"
+        android:background="#ffffff"
+        android:textSize="30dp"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d2d2d2"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="left"
+        android:padding="10dp"
         android:text="专业"
-        android:textSize="30sp"
-        />
-    <LinearLayout
+        android:textColor="#807979"
+        android:textSize="20dp" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="大数据技术与数据科学"
+                android:layout_marginLeft="5dp"
+                android:layout_centerInParent="true"
+                android:padding="6dp"
+                android:textColor="#2E2B2B"
+                android:textSize="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="计算机科学与技术"
+                android:layout_marginLeft="5dp"
+                android:layout_centerInParent="true"
+                android:textColor="#2E2B2B"
+                android:textSize="15dp"
+                android:padding="6dp"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="生物信息学"
+                android:layout_marginLeft="5dp"
+                android:textColor="#2E2B2B"
+                android:textSize="15dp"
+                android:padding="6dp"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <RadioGroup
+            android:id="@+id/rg_major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+            <RadioButton
+                android:id="@+id/radio_ds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/radio_cs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/radio_bi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </RadioButton>
+        </RadioGroup>
+    </RelativeLayout>
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-
-        <CheckBox
-            android:id="@+id/cb_major1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="大数据科学" />
-
-        <CheckBox
-            android:id="@+id/cb_major2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="计算机科学与技术" />
-
-        <CheckBox
-            android:id="@+id/cb_major3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="生物信息学" />
-    </LinearLayout>
+        android:layout_height="1dp"
+        android:background="#d2d2d2"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:gravity="left"
         android:text="年级"
-        android:textSize="30sp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-
-        <CheckBox
-            android:id="@+id/cb_grade1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="大一" />
-
-        <CheckBox
-            android:id="@+id/cb_grade2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="大二" />
-
-        <CheckBox
-            android:id="@+id/cb_grade3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="大三" />
-
-        <CheckBox
-            android:id="@+id/cb_grade4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="大四" />
-    </LinearLayout>
-    <LinearLayout
+        android:padding="10dp"
+        android:textColor="#807979"
+        android:background="#ffffff"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
-        <Button
-            android:id="@+id/screen_yes"
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:background="#ff6633"
-            android:text="确定" />
-        <Button
-            android:id="@+id/screen_no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:background="#ff9933"
-            android:layout_marginLeft="150dp"
-            android:text="重置"
-            android:layout_marginStart="150dp" />
-    </LinearLayout>
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="2016"
+                android:layout_marginLeft="5dp"
+                android:layout_centerInParent="true"
+                android:padding="6dp"
+                android:textColor="#2E2B2B"
+                android:textSize="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="2017"
+                android:layout_marginLeft="5dp"
+                android:layout_centerInParent="true"
+                android:textColor="#2E2B2B"
+                android:textSize="15dp"
+                android:padding="6dp"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="2018"
+                android:layout_marginLeft="5dp"
+                android:textColor="#2E2B2B"
+                android:textSize="15dp"
+                android:padding="6dp"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="2019"
+                android:layout_marginLeft="5dp"
+                android:textColor="#2E2B2B"
+                android:textSize="15dp"
+                android:padding="6dp"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <RadioGroup
+            android:id="@+id/rg_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <RadioButton
+                android:id="@+id/radio_2016"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/radio_2017"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/radio_2018"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/radio_2019"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </RadioButton>
+        </RadioGroup>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:background="#D5D6D6"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/resetting_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="重置"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/ok_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="确定"
+                android:background="@color/colorPrimary"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

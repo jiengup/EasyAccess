@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoSettingActivity"
+    android:orientation="vertical"
+    android:background="@color/gray9">
+
+    <!--    标题栏-->
+    <com.example.easyaccess.ui.TitleLayout
+        android:id="@+id/tl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--    头像-->
+    <LinearLayout
+        android:id="@+id/ll_portrait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:background="@color/white">
+
+        <com.example.easyaccess.ui.RoundImageView
+            android:id="@+id/ri_portrait"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/de_head"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改头像"
+            android:textColor="@color/gray3"
+            android:layout_gravity="center"
+            android:paddingLeft="15dp"/>
+
+    </LinearLayout>
+
+
+    <com.example.easyaccess.ui.ItemGroup
+        android:id="@+id/ig_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="1dp"
+        app:edt_hint_content="修改昵称"
+        app:paddingLeft="15dp"
+        app:title="昵称" />
+
+
+    <com.example.easyaccess.ui.ItemGroup
+        android:id="@+id/ig_sign"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="1dp"
+        app:edt_hint_content="个性签名"
+        app:paddingLeft="15dp"
+        app:title="个性签名" />
+
+    <com.example.easyaccess.ui.ItemGroup
+        android:id="@+id/ig_mail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="1dp"
+        app:jt_visible="false"
+        app:isEditable="false"
+        app:paddingLeft="15dp"
+        app:title="绑定邮箱" />
+
+    <com.example.easyaccess.ui.ItemGroup
+        android:id="@+id/ig_pass"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="1dp"
+        app:paddingLeft="15dp"
+        app:title="修改密码" />
+
+
+
+</LinearLayout>

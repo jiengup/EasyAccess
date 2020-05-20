@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.easyaccess.InfoSettingActivity;
 import com.example.easyaccess.LoginActivity;
 import com.example.easyaccess.R;
 import com.example.easyaccess.utils.Constants;
@@ -26,12 +27,11 @@ import com.example.easyaccess.utils.Constants;
 public class MineFragment extends Fragment {
 
     private MineViewModel mViewModel;
-    private ImageView mIblogin;
+    private ImageView mIblogin, mBtnSetting;
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
     private TextView mTvLogin;
     private Button mBtnLogout;
-    private ImageButton mBtnSetting;
     private boolean isLogioned;
 
     public static MineFragment newInstance(){ return new MineFragment(); }
@@ -43,6 +43,7 @@ public class MineFragment extends Fragment {
         mIblogin = root.findViewById(R.id.ib_login);
         mTvLogin = root.findViewById(R.id.tv_login);
         mBtnLogout = root.findViewById(R.id.btn_logout);
+        mBtnSetting = root.findViewById(R.id.iv_setting);
         return root;
     }
 
@@ -86,19 +87,25 @@ public class MineFragment extends Fragment {
             System.out.println(Constants.BASE_URL + head_portrait_url);
             Glide.with(getContext()).load(Constants.BASE_URL + head_portrait_url).into(mIblogin);
             mTvLogin.setText(username);
+            mBtnSetting.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getContext(), InfoSettingActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
         else{
             //System.out.println("not login");
             isLogioned = false;
             mIblogin.setEnabled(true);
-//            mBtnSetting.setOnClickListener(new View.OnClickListener(){
-//
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent = new Intent(getContext(), LoginActivity.class);
-//                    startActivity(intent);
-//                }
-//            });
+            mBtnSetting.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getContext(), LoginActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
     }
     @Override
@@ -106,5 +113,4 @@ public class MineFragment extends Fragment {
         super.onResume();
         initListeners();
     }
-
 }

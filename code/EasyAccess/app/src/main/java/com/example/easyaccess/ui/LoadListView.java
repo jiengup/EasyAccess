@@ -1,4 +1,4 @@
-package com.example.easyaccess.ui.news;
+package com.example.easyaccess.ui;
 
 import android.content.Context;
 import android.os.Build;

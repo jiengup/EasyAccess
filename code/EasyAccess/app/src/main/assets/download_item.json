@@ -1,0 +1,18 @@
+{
+  "download_course": [
+    { "id": 1,"name": "软件工程","desc": "教授学生怎么做软件。","submit_time": "2020-05-12 09:14:19.357573","belong_to_grade_id": 2,"submitter_id":"yoshi@nintendo.com"},
+    { "id": 2,"name": "计算机组成原理","desc": "教授学生计算机组成。","submit_time": "2020-05-12 09:14:47.127610","belong_to_grade_id": 2,"submitter_id":"yoshi@nintendo.com"},
+    { "id": 3,"name": "汇编语言程序设计","desc": "教授学生汇编语言。","submit_time": "2020-05-12 09:15:10.734347","belong_to_grade_id": 2,"submitter_id":"yoshi@nintendo.com"},
+    { "id": 4,"name": "人工智能","desc": "教授学生AI。","submit_time": "2020-05-12 09:15:10.734347","belong_to_grade_id": 2,"submitter_id":"yoshi@nintendo.com"},
+    { "id": 5,"name": "C++程序设计","desc": "教授学生C++。","submit_time": "2020-05-12 09:15:10.734347","belong_to_grade_id": 3,"submitter_id":"yoshi@nintendo.com"}
+  ],
+  "download_resource": [
+    {"id":1, "name": "CLion", "desc": "CLion: A Cross-Platform IDE for C and C++ by JetBrains.", "icon":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589789180423&di=2ae9238bdb261c98dacaadce350ac233&imgtype=0&src=http%3A%2F%2Fimg3.orsoon.com%2Fpic%2F201806%2F26104105_49405661e8.png","download_url":"https://www.jetbrains.com/clion/", "belong_to_course_id":5},
+    {"id":2, "name": "android studio", "desc":"Android Studio provides the fastest tools for building apps on every type of Android device.", "icon":"https://bkimg.cdn.bcebos.com/pic/6c224f4a20a44623d0bfc7979322720e0df3d7ca?x-bce-process=image/watermark,g_7,image_d2F0ZXIvYmFpa2U4MA==,xp_5,yp_5", "download_url":"https://developer.android.google.cn/studio/","belong_to_course_id":6},
+    {"id":3, "name": "PyCharm", "desc": "PyCharm: the Python IDE for Professional Developers by JetBrains.", "icon":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589789444891&di=68e31cddf60de736da0c68854636858c&imgtype=0&src=http%3A%2F%2Fwww.shaoerbianchengwang.com%2Fwp-content%2Fuploads%2F2017%2F09%2FPyCharm.jpg", "download_url":"https://www.jetbrains.com/pycharm/", "belong_to_course_id":4},
+    {"id":4, "name": "DOSBox", "desc": "DOSBox, an x86 emulator with DOS.", "icon":"https://bkimg.cdn.bcebos.com/pic/8694a4c27d1ed21b06dcdc85a96eddc451da3fbc?x-bce-process=image/watermark,g_7,image_d2F0ZXIvYmFpa2U4MA==,xp_5,yp_5", "download_url":"https://www.dosbox.com/download.php?main=1", "belong_to_course_id":3},
+    {"id":5, "name": "DOSBox", "desc": "DOSBox, an x86 emulator with DOS.", "icon":"https://bkimg.cdn.bcebos.com/pic/8694a4c27d1ed21b06dcdc85a96eddc451da3fbc?x-bce-process=image/watermark,g_7,image_d2F0ZXIvYmFpa2U4MA==,xp_5,yp_5", "download_url":"https://www.dosbox.com/download.php?main=1", "belong_to_course_id":3},
+    {"id":6, "name": "DOSBox", "desc": "DOSBox, an x86 emulator with DOS.", "icon":"https://bkimg.cdn.bcebos.com/pic/8694a4c27d1ed21b06dcdc85a96eddc451da3fbc?x-bce-process=image/watermark,g_7,image_d2F0ZXIvYmFpa2U4MA==,xp_5,yp_5", "download_url":"https://www.dosbox.com/download.php?main=1", "belong_to_course_id":3},
+    {"id":7, "name": "DOSBox", "desc": "DOSBox, an x86 emulator with DOS.", "icon":"https://bkimg.cdn.bcebos.com/pic/8694a4c27d1ed21b06dcdc85a96eddc451da3fbc?x-bce-process=image/watermark,g_7,image_d2F0ZXIvYmFpa2U4MA==,xp_5,yp_5", "download_url":"https://www.dosbox.com/download.php?main=1", "belong_to_course_id":3}
+  ]
+  }

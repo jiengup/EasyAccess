@@ -3,6 +3,7 @@ package com.example.easyaccess;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.Image;
 import android.os.Bundle;
@@ -47,6 +48,8 @@ public class CommentActivity extends AppCompatActivity {
     private LinearLayout showStar;
     private LinearLayout showInput;
     private ImageView imageStar;
+    private boolean isStar;
+    private boolean isLogin;
     private EditText et;
     private Button btnSend;
 
@@ -68,14 +71,14 @@ public class CommentActivity extends AppCompatActivity {
         list = new ArrayList<CommentItem>();
         putData(String.valueOf(getIntent().getStringExtra("news_id")));
         SharedPreferences msp = getSharedPreferences("user", MODE_PRIVATE);
-        boolean isLogin;
         if(!msp.getString("email", "null").equals("null")){
             isLogin = true;
         }
         else{
             isLogin = false;
         }
-        mAdapter = new CommentAdapter(this, requestQueue, list, isLogin);
+        isStar = false;
+        mAdapter = new CommentAdapter(this, requestQueue, list);
         listView.setAdapter(mAdapter);
         listView.setEmptyView((TextView)findViewById(R.id.nocommentshow));
         if(mSharedPreferences.getString("email", "null").equals("null")){
@@ -183,6 +186,7 @@ public class CommentActivity extends AppCompatActivity {
                             for (int i = 0; i < data.length(); i++) {
                                 CommentItem commentItem = new CommentItem();
                                 JSONObject item = data.getJSONObject(i);
+                                commentItem.set_id(item.getString("comment_id"));
                                 commentItem.setNickname(item.getString("nickname"));
                                 commentItem.setHeadUrl(Constants.BASE_URL + item.getString("head_url"));
                                 commentItem.setReleaseTime(item.getString("release_time"));

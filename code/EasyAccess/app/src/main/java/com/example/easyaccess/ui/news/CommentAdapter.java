@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,8 +16,12 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.NetworkImageView;
 
 import com.example.easyaccess.LoginActivity;
+import com.example.easyaccess.CommentActivity;
 import com.example.easyaccess.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.sackcentury.shinebuttonlib.ShineButton;
+
+import org.w3c.dom.Comment;
 
 import java.util.List;
 
@@ -27,13 +32,13 @@ public class CommentAdapter extends BaseAdapter {
     private LayoutInflater inflater;
     private RequestQueue requestQueue;
     private List<CommentItem> commentItemList;
-    private boolean isLogin;
+    boolean isStar;
 
-    public CommentAdapter(Context context, RequestQueue requestQueue, List<CommentItem> commentItemList, boolean isLogin){
+    public CommentAdapter(Context context, RequestQueue requestQueue, List<CommentItem> commentItemList){
         this.requestQueue = requestQueue;
         this.inflater = LayoutInflater.from(context);
         this.commentItemList = commentItemList;
-        this.isLogin = isLogin;
+        this.isStar = false;
     }
 
     @Override
@@ -52,19 +57,35 @@ public class CommentAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         View view=inflater.inflate(R.layout.comment_item, null);
         ShineButton btHeart = (ShineButton)view.findViewById(R.id.bt_heart);
         NetworkImageView user_headepicture=(NetworkImageView)view.findViewById(R.id.user_headepicture);
         TextView user_name=(TextView)view.findViewById(R.id.user_name);
         TextView user_release_time=(TextView)view.findViewById(R.id.user_release_time);
         TextView comment_item_content=(TextView)view.findViewById(R.id.comment_item_content);
-        TextView total_stars = (TextView)view.findViewById(R.id.star_num);
+        final TextView total_stars = (TextView)view.findViewById(R.id.star_num);
         networkImageLoad(requestQueue, commentItemList.get(position).getHeadUrl(),user_headepicture);
         user_name.setText(commentItemList.get(position).getNickname());
         user_release_time.setText(commentItemList.get(position).getReleaseTime());
         comment_item_content.setText(commentItemList.get(position).getContent());
         total_stars.setText("(" + commentItemList.get(position).getTotalStars() + ")");
+        btHeart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!isStar){
+                    commentItemList.get(position).setTotalStars(commentItemList.get(position).getTotalStars() + 1);
+                    total_stars.setText("(" + commentItemList.get(position).getTotalStars() + ")");
+                    isStar = true;
+                }
+                else{
+                    commentItemList.get(position).setTotalStars(commentItemList.get(position).getTotalStars() - 1);
+                    total_stars.setText("(" + commentItemList.get(position).getTotalStars() + ")");
+                    isStar = false;
+                }
+            }
+        });
         return view;
     }
+
 }
