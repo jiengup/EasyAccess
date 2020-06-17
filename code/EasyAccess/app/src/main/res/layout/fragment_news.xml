@@ -43,7 +43,7 @@
             android:layout_height="match_parent"/>
     </LinearLayout>
 
-    <com.example.easyaccess.ui.LoadListView
+    <com.example.easyaccess.ui.View.LoadListView
         android:layout_below="@id/btn_list_layout"
         android:layout_alignParentBottom="true"
         android:id="@+id/news_list"

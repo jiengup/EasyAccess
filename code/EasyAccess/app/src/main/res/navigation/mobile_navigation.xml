@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_news"
-        android:name="com.example.easyaccess.ui.news.NewsFragment"
+        android:name="com.example.easyaccess.ui.fragment.NewsFragment"
         android:label="@string/title_news"
         tools:layout="@layout/fragment_news" />
 
     <fragment
         android:id="@+id/navigation_download"
-        android:name="com.example.easyaccess.ui.download.DownloadFragment"
+        android:name="com.example.easyaccess.ui.fragment.DownloadFragment"
         android:label="@string/title_download"
         tools:layout="@layout/fragment_download" />
 
     <fragment
         android:id="@+id/navigation_team"
-        android:name="com.example.easyaccess.ui.team.TeamFragment"
+        android:name="com.example.easyaccess.ui.fragment.TeamFragment"
         android:label="@string/title_team"
         tools:layout="@layout/fragment_team" />
 
     <fragment
         android:id="@+id/navigation_mine"
-        android:name="com.example.easyaccess.ui.mine.MineFragment"
+        android:name="com.example.easyaccess.ui.fragment.MineFragment"
         android:label="@string/title_mine"
         tools:layout="@layout/fragment_mine" />
 </navigation>

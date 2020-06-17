@@ -19,14 +19,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PublishActivity"></activity>
+        <activity android:name=".Activity.PublishActivity"></activity>
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,30 +35,30 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Activity.RegisterActivity"
             android:label="注册" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activity.LoginActivity"
             android:label="登录" />
         <activity
-            android:name=".NewsDetailActivity"
+            android:name=".Activity.NewsDetailActivity"
             android:label="详细新闻" />
         <activity
-            android:name=".CommentActivity"
+            android:name=".Activity.CommentActivity"
             android:label="评论" />
         <activity
-            android:name=".TeamworkDetailActivity"
+            android:name=".Activity.TeamworkDetailActivity"
             android:label="项目详情">
         </activity>
         <activity
-            android:name=".EditPass"
+            android:name=".utils.EditPass"
             android:label="修改密码">
         </activity>
-        <activity android:name=".EditSign"
+        <activity android:name=".utils.EditSign"
             android:label="修改签名"/>
-        <activity android:name=".EditName"
+        <activity android:name=".utils.EditName"
             android:label="修改用户名"/>
-        <activity android:name=".InfoSettingActivity"
+        <activity android:name=".Activity.InfoSettingActivity"
             android:label="个人设置"/>
         <provider
             android:name="androidx.core.content.FileProvider"

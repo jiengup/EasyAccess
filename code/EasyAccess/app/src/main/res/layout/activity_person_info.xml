@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InfoSettingActivity"
+    tools:context=".Activity.InfoSettingActivity"
     android:orientation="vertical"
     android:background="@color/gray9">
 
     <!--    标题栏-->
-    <com.example.easyaccess.ui.TitleLayout
+    <com.example.easyaccess.ui.View.TitleLayout
         android:id="@+id/tl_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -23,7 +23,7 @@
         android:paddingBottom="10dp"
         android:background="@color/white">
 
-        <com.example.easyaccess.ui.RoundImageView
+        <com.example.easyaccess.ui.View.RoundImageView
             android:id="@+id/ri_portrait"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -42,7 +42,7 @@
     </LinearLayout>
 
 
-    <com.example.easyaccess.ui.ItemGroup
+    <com.example.easyaccess.ui.View.ItemGroup
         android:id="@+id/ig_name"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -52,7 +52,7 @@
         app:title="昵称" />
 
 
-    <com.example.easyaccess.ui.ItemGroup
+    <com.example.easyaccess.ui.View.ItemGroup
         android:id="@+id/ig_sign"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -61,7 +61,7 @@
         app:paddingLeft="15dp"
         app:title="个性签名" />
 
-    <com.example.easyaccess.ui.ItemGroup
+    <com.example.easyaccess.ui.View.ItemGroup
         android:id="@+id/ig_mail"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -71,7 +71,7 @@
         app:paddingLeft="15dp"
         app:title="绑定邮箱" />
 
-    <com.example.easyaccess.ui.ItemGroup
+    <com.example.easyaccess.ui.View.ItemGroup
         android:id="@+id/ig_pass"
         android:layout_width="match_parent"
         android:layout_height="45dp"
