@@ -1,6 +1,6 @@
 # EasyAccess
 A software developed for Software Engineer class by a HZAU 
-
+**后端源代码[Easy_access_backend](https://github.com/JiengupXing/EasyAccess_backend)**
 
 
 ## UPDATE
@@ -56,7 +56,7 @@ A software developed for Software Engineer class by a HZAU
 
 已经将**后端代码框架搭建好**,并且已经实现了**目前用到的所有后端接口**
 
-详情跳转[Easy_access](https://github.com/JiengupXing/EasyAccess_backend)
+详情跳转[Easy_access_backend](https://github.com/JiengupXing/EasyAccess_backend)
 
 已经**完成了资讯(news)及其相关功能的开发**
 
